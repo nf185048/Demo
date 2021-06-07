@@ -2,9 +2,9 @@
   margin: 2em 4em;
 }
 
-.content {
+/* .content {
   bottom: 0;
-}
+} */
 
 .headline {
   padding-bottom: 4em;
@@ -17,8 +17,3 @@
 .router-link, .router-link:visited {
   text-decoration: none;
 }
-
-.component-category {
-  
-}
-
