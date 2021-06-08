@@ -1,6 +1,6 @@
 import React from 'react'
 import type { FC } from 'react'
-import { Button } from '@ncr-design-system/react'
+import { Button, ButtonGroup } from '@ncr-design-system/react'
 
 export const Buttons: FC<{}> = ({ children }) => {
   return (
@@ -10,6 +10,12 @@ export const Buttons: FC<{}> = ({ children }) => {
       <Button variant='link'>Link</Button>
       <Button variant='outline'>Outline</Button>
       <Button variant='text'>Text</Button>
+      <br />
+      <ButtonGroup>
+        <Button variant='outline'>Hello</Button>
+        <Button variant='outline'>Hello</Button>
+        <Button variant='outline'>Hello</Button>
+      </ButtonGroup>
       {/* {children} */}
     </div>
   )

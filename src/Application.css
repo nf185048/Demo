@@ -1,13 +1,16 @@
 .app-container {
+  display: flex;
   margin: 2em 4em;
+  flex: 1;
 }
 
 /* .content {
   bottom: 0;
 } */
 
-.headline {
+.title {
   padding-bottom: 4em;
+  /* display: block; */
 }
 
 .list-title {
@@ -17,3 +20,4 @@
 .router-link, .router-link:visited {
   text-decoration: none;
 }
+

@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import Application from './Application'
 import reportWebVitals from './reportWebVitals'
 import { MemoryRouter } from 'react-router-dom'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
+import './index.css'
 
 ReactDOM.render(
   <MemoryRouter>
