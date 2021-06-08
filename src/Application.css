@@ -4,20 +4,29 @@
   flex: 1;
 }
 
-/* .content {
-  bottom: 0;
-} */
+.content {
+  float: right;
+  right: 0;
+  display: flex;
+  width: 70%;
+}
 
-.title {
-  padding-bottom: 4em;
-  /* display: block; */
+.header {
+  padding: 4em;
+  width: 100%;
 }
 
 .list-title {
   padding-bottom: 2em;
 }
 
-.router-link, .router-link:visited {
+.router-link,
+.router-link:visited {
   text-decoration: none;
 }
 
+.side-nav {
+  float: left;
+  left: 0;
+  padding-right: 8em;
+}

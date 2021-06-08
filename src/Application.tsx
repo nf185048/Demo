@@ -1,20 +1,20 @@
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './Application.css'
 import * as Pages from './pages'
-import { Grid, Typography, List, ListTitle, ItemGroup, Item, Label } from '@ncr-design-system/react'
+import { Grid, Typography, List, ItemGroup, Item, Label } from '@ncr-design-system/react'
 
 function Application() {
   return (
     <Grid container spacing={3} className='app-container'>
-      <Typography className='title' variant='title1'>
-        NCR Design System | React
-      </Typography>
-
+      <div className='header'>
+        <Typography className='title' variant='title1'>
+          NCR Design System | React
+        </Typography>
+      </div>
       {/* Navigation */}
       <Router>
-        <Grid xs={12}>
+        <div className='side-nav'>
           <List>
-            <ListTitle className='list-title'>Web Component Showcase</ListTitle>
             <ItemGroup>
               <Item>
                 <Label position='stacked'>Controls</Label>
@@ -109,10 +109,10 @@ function Application() {
               </Item>
             </ItemGroup>
           </List>
-        </Grid>
+        </div>
 
         {/* Content */}
-        <Grid xs={12}>
+        <div className='content'>
           <Switch>
             <Route path='/pages/Alerts' component={() => <Pages.Alerts />} />
             <Route path='/pages/AppClones' component={() => <Pages.AppClones />} />
@@ -140,7 +140,7 @@ function Application() {
             <Route path='/pages/Toggles' component={() => <Pages.Toggles />} />
             <Route path='/pages/Typographies' component={() => <Pages.Typographies />} />
           </Switch>
-        </Grid>
+        </div>
       </Router>
     </Grid>
   )

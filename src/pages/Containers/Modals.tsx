@@ -1,22 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import type { FC } from 'react'
 import { Modal, Button } from '@ncr-design-system/react'
 
 export const Modals: FC<{}> = ({ children }) => {
-  let modalOpen = false
-
-  const handleOpenClick = () => {
-    modalOpen = true
-  }
-
-  const handleCloseClick = () => {
-    modalOpen = false
-  }
+  const [opened, setOpened] = useState(false)
 
   return (
     <div>
       <p>Modals</p>
-      <Modal width='400px' open={modalOpen} onHide={handleCloseClick}>
+      <Modal width='400px' open={opened} onHide={() => setOpened(true)}>
         <h3 slot='title'>Modal Title</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eos nostrum hic corrupti. Magni accusamus quos
@@ -24,10 +16,10 @@ export const Modals: FC<{}> = ({ children }) => {
           laboriosam.
         </p>
         <div slot='footer'>
-          <Button onClick={() => handleCloseClick}>Confirm</Button>
+          <Button onClick={() => setOpened(false)}>Confirm</Button>
         </div>
       </Modal>
-      <Button variant='outline' onClick={() => handleOpenClick}>
+      <Button variant='outline' onClick={() => setOpened(true)}>
         Open Modal
       </Button>
       {children}
