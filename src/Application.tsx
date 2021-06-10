@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './Application.css'
 import * as Pages from './pages'
-import { Grid, Button, List, ItemGroup, Item, Label, Drawer } from '@ncr-design-system/react'
+import { Grid, Button, List, ItemGroup, Item, Label, Drawer, Typography } from '@ncr-design-system/react'
 import { ReactComponent as Menu } from './assets/menu.svg'
 
 function Application() {
@@ -46,7 +46,7 @@ function Application() {
               <Link className='router-link' to='/pages/Selects'>
                 Select
               </Link>
-              <Link className='router-link' to='/pages/Tabs'>
+              <Link className='router-link' to='/pages/TabsExample'>
                 Tabs
               </Link>
               <Link className='router-link' to='/pages/Toggles'>
@@ -139,8 +139,9 @@ function Application() {
         <Route path='/pages/Ranges' component={() => <Pages.Ranges />} />
         <Route path='/pages/Searches' component={() => <Pages.Searches />} />
         <Route path='/pages/Selects' component={() => <Pages.Selects />} />
-        <Route path='/pages/Tabs' component={() => <Pages.Tabs />} />
+        <Route path='/pages/TabsExample' component={() => <Pages.TabsExample />} />
         <Route path='/pages/Toggles' component={() => <Pages.Toggles />} />
+        <Route path='/pages/Tooltips' component={() => <Pages.Tooltips />} />
         <Route path='/pages/Typographies' component={() => <Pages.Typographies />} />
       </Switch>
     )
@@ -148,17 +149,23 @@ function Application() {
 
   return (
     <Router>
-      <Grid className='app-container'>
+      <Grid container className='app-container'>
         {/* Navigation */}
-        <Grid xs={2}>
-          <Button variant='outline' onClick={() => setOpened(true)}>
-            <Menu />
-          </Button>
+        <Grid container spacing={3} alignItems='center'>
+          <Grid item>
+            <Button variant='outline' onClick={() => setOpened(true)}>
+              <Menu />
+            </Button>
+          </Grid>
+          <Grid item>
+            <Typography variant='headline'>User Testing</Typography>
+          </Grid>
         </Grid>
+
         <AppDrawer />
 
         {/* Content */}
-        <Grid xs={3}>
+        <Grid xs={10}>
           <AppContent />
         </Grid>
       </Grid>
