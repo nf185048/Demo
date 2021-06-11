@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import type { FC } from 'react'
 import { Button, Drawer, Item, Label, List } from '@ncr-design-system/react'
 
-export const Drawers: FC<{}> = () => {
+export const DrawerExample: FC<{}> = () => {
   // let opened = false
   const [opened, setOpened] = useState(false)
 

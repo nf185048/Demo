@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Grid, Typography, ProgressIndicator } from '@ncr-design-system/react'
 
-export const Progresses: FC<{}> = () => {
+export const ProgressExample: FC<{}> = () => {
   return (
     <div>
       <p>Progresses</p>

@@ -1,7 +1,7 @@
 import React from 'react'
 import type { FC } from 'react'
 
-export const Typographies: FC<{}> = ({ children }) => {
+export const TypographyExample: FC<{}> = ({ children }) => {
   return (
     <div>
       <p>Typographies</p>

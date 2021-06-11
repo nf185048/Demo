@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import type { FC } from 'react'
 import { Modal, Button } from '@ncr-design-system/react'
 
-export const Modals: FC<{}> = ({ children }) => {
+export const ModalExample: FC<{}> = ({ children }) => {
   const [opened, setOpened] = useState(false)
 
   return (

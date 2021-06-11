@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import type { FC } from 'react'
 import { Grid, FormLabel, Radio, RadioGroup } from '@ncr-design-system/react'
 
-export const Radios: FC<{}> = () => {
+export const RadioExample: FC<{}> = () => {
   const [value, setValue] = useState<string>('blue')
 
   const handleChange = (e: CustomEvent<{ value: string }>) => {

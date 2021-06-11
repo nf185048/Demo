@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Item, Range, RangeValue, RangeChangeEventDetail } from '@ncr-design-system/react'
 
-export const Ranges: FC<{}> = () => {
+export const RangeExample: FC<{}> = () => {
   let value: RangeValue = 25
 
   const handleUpdate = (e: CustomEvent<RangeChangeEventDetail>) => {

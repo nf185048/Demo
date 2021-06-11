@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { ContextItem, Typography, ContextMenu, Dropdown, Button, ContextDivider } from '@ncr-design-system/react'
 
-export const Dropdowns: FC<{}> = () => {
+export const DropdownExample: FC<{}> = () => {
   let opened = false
   const onHandleOpen = () => {
     opened = true

@@ -1,7 +1,7 @@
 import React from 'react'
 import type { FC } from 'react'
 
-export const Colors: FC<{}> = ({ children }) => {
+export const ColorExample: FC<{}> = ({ children }) => {
   return (
     <div>
       <p>Colors</p>

@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Pagination } from '@ncr-design-system/react'
 
-export const Paginations: FC<{}> = () => {
+export const PaginationExample: FC<{}> = () => {
   return (
     <div>
       <p>Pagination</p>

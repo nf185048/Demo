@@ -1,3 +1,3 @@
-export { Drawers } from './Drawers'
-export { Modals } from './Modals'
-export { Dropdowns } from './Dropdowns'
+export { DrawerExample } from './Drawers'
+export { ModalExample } from './Modals'
+export { DropdownExample } from './Dropdowns'

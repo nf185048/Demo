@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Label, Option, InputWrapper, Button, Icon, Item, List, ListTitle, Select } from '@ncr-design-system/react'
 
-export const Inputs: FC<{}> = () => {
+export const InputExample: FC<{}> = () => {
   const arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
 
   return (

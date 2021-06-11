@@ -1,4 +1,4 @@
-export { Grids } from './Grids'
-export { Lists } from './Lists'
-export { Tables } from './Tables'
-export { Apps } from './Apps'
+export { GridExample } from './Grids'
+export { ListExample } from './Lists'
+export { TableExample } from './Tables'
+export { AppExample } from './Apps'

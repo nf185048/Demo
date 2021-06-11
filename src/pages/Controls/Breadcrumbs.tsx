@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Breadcrumb, BreadcrumbList } from '@ncr-design-system/react'
 
-export const Breadcrumbs: FC<{}> = () => {
+export const BreadcrumbExample: FC<{}> = () => {
   return (
     <div>
       <p>Breadcrumbs</p>

@@ -19,93 +19,99 @@ function Application() {
           <ItemGroup>
             <Item>
               <Label position='stacked'>Controls</Label>
-              <Link className='router-link' to='/pages/Breadcrumbs'>
+              <Link className='router-link' to='/pages/BreadcrumbExample'>
                 Breadcrumbs
               </Link>
-              <Link className='router-link' to='/pages/Buttons'>
+              <Link className='router-link' to='/pages/ButtonExample'>
                 Buttons
               </Link>
-              <Link className='router-link' to='/pages/Checkboxes'>
+              <Link className='router-link' to='/pages/CheckboxExample'>
                 Checkboxes
               </Link>
-              <Link className='router-link' to='/pages/Inputs'>
+              <Link className='router-link' to='/pages/InputExample'>
                 Inputs
               </Link>
-              <Link className='router-link' to='/pages/Paginations'>
+              <Link className='router-link' to='/pages/PaginationExample'>
                 Pagination
               </Link>
-              <Link className='router-link' to='/pages/Radios'>
+              <Link className='router-link' to='/pages/RadioExample'>
                 Radios
               </Link>
-              <Link className='router-link' to='/pages/Ranges'>
+              <Link className='router-link' to='/pages/RangeExample'>
                 Ranges
               </Link>
-              <Link className='router-link' to='/pages/Searches'>
+              <Link className='router-link' to='/pages/SearchExample'>
                 Search
               </Link>
-              <Link className='router-link' to='/pages/Selects'>
+              <Link className='router-link' to='/pages/SelectExample'>
                 Select
               </Link>
               <Link className='router-link' to='/pages/TabsExample'>
                 Tabs
               </Link>
-              <Link className='router-link' to='/pages/Toggles'>
+              <Link className='router-link' to='/pages/ToggleExample'>
                 Toggle
               </Link>
             </Item>
 
             <Item>
               <Label position='stacked'>Containers</Label>
-              <Link className='router-link' to='/pages/Drawers'>
+              <Link className='router-link' to='/pages/DrawerExample'>
                 Drawers
               </Link>
-              <Link className='router-link' to='/pages/Dropdowns'>
+              <Link className='router-link' to='/pages/DropdownExample'>
                 Dropdowns
               </Link>
-              <Link className='router-link' to='/pages/Modals'>
+              <Link className='router-link' to='/pages/ModalExample'>
                 Modals
               </Link>
             </Item>
 
             <Item>
               <Label position='stacked'>Content</Label>
-              <Link className='router-link' to='/pages/Colors'>
+              <Link className='router-link' to='/pages/ColorExample'>
                 Colors
               </Link>
-              <Link className='router-link' to='/pages/Typographies'>
-                Typographies
+              <Link className='router-link' to='/pages/TypographyExample'>
+                Typography
               </Link>
             </Item>
 
             <Item>
               <Label position='stacked'>Layout</Label>
-              <Link className='router-link' to='/pages/Grids'>
-                Grids
+              <Link className='router-link' to='/pages/AppExample'>
+                App
               </Link>
-              <Link className='router-link' to='/pages/Lists'>
+              <Link className='router-link' to='/pages/GridExample'>
+                Grid
+              </Link>
+              <Link className='router-link' to='/pages/ListExample'>
                 Lists
+              </Link>
+              <Link className='router-link' to='/pages/TableExample'>
+                Tables
               </Link>
             </Item>
 
             <Item>
               <Label position='stacked'>Informational</Label>
-              <Link className='router-link' to='/pages/Alerts'>
+              <Link className='router-link' to='/pages/AlertExample'>
                 Alerts
               </Link>
-              <Link className='router-link' to='/pages/Badges'>
+              <Link className='router-link' to='/pages/BadgeExample'>
                 Badges
               </Link>
-              <Link className='router-link' to='/pages/Icons'>
-                Icons
+              <Link className='router-link' to='/pages/IconExample'>
+                Icon
               </Link>
-              <Link className='router-link' to='/pages/Loadings'>
+              <Link className='router-link' to='/pages/LoadingExample'>
                 Loading
               </Link>
-              <Link className='router-link' to='/pages/Progresses'>
+              <Link className='router-link' to='/pages/ProgressExample'>
                 Progress
               </Link>
-              <Link className='router-link' to='/pages/Tooltips'>
-                Tooltips
+              <Link className='router-link' to='/pages/TooltipExample'>
+                Tooltip
               </Link>
             </Item>
           </ItemGroup>
@@ -117,32 +123,34 @@ function Application() {
   const AppContent = () => {
     return (
       <Switch>
-        <Route path='/pages/Alerts' component={() => <Pages.Alerts />} />
+        <Route path='/pages/AlertExample' component={() => <Pages.AlertExample />} />
+        <Route path='/pages/AppExample' component={() => <Pages.AppExample />} />
         <Route path='/pages/AppClones' component={() => <Pages.AppClones />} />
-        <Route path='/pages/Badges' component={() => <Pages.Badges />} />
-        <Route path='/pages/Breadcrumbs' component={() => <Pages.Breadcrumbs />} />
-        <Route path='/pages/Buttons' component={() => <Pages.Buttons />} />
-        <Route path='/pages/Checkboxes' component={() => <Pages.Checkboxes />} />
-        <Route path='/pages/Colors' component={() => <Pages.Colors />} />
+        <Route path='/pages/BadgeExample' component={() => <Pages.BadgeExample />} />
+        <Route path='/pages/BreadcrumbExample' component={() => <Pages.BreadcrumbExample />} />
+        <Route path='/pages/ButtonExample' component={() => <Pages.ButtonExample />} />
+        <Route path='/pages/CheckboxExample' component={() => <Pages.CheckboxExample />} />
+        <Route path='/pages/Colors' component={() => <Pages.ColorExample />} />
         <Route path='/pages/DigitalOrdering' component={() => <Pages.OrderSummary />} />
-        <Route path='/pages/Drawers' component={() => <Pages.Drawers />} />
-        <Route path='/pages/Dropdowns' component={() => <Pages.Dropdowns />} />
-        <Route path='/pages/Grids' component={() => <Pages.Grids />} />
-        <Route path='/pages/Icons' component={() => <Pages.Icons />} />
-        <Route path='/pages/Inputs' component={() => <Pages.Inputs />} />
-        <Route path='/pages/Lists' component={() => <Pages.Lists />} />
-        <Route path='/pages/Loadings' component={() => <Pages.Loadings />} />
-        <Route path='/pages/Modals' component={() => <Pages.Modals />} />
-        <Route path='/pages/Paginations' component={() => <Pages.Paginations />} />
-        <Route path='/pages/Progresses' component={() => <Pages.Progresses />} />
-        <Route path='/pages/Radios' component={() => <Pages.Radios />} />
-        <Route path='/pages/Ranges' component={() => <Pages.Ranges />} />
-        <Route path='/pages/Searches' component={() => <Pages.Searches />} />
-        <Route path='/pages/Selects' component={() => <Pages.Selects />} />
+        <Route path='/pages/DrawerExample' component={() => <Pages.DrawerExample />} />
+        <Route path='/pages/DropdownExample' component={() => <Pages.DropdownExample />} />
+        <Route path='/pages/GridExample' component={() => <Pages.GridExample />} />
+        <Route path='/pages/IconExample' component={() => <Pages.IconExample />} />
+        <Route path='/pages/InputExample' component={() => <Pages.InputExample />} />
+        <Route path='/pages/ListExample' component={() => <Pages.ListExample />} />
+        <Route path='/pages/LoadingExample' component={() => <Pages.LoadingExample />} />
+        <Route path='/pages/ModalExample' component={() => <Pages.ModalExample />} />
+        <Route path='/pages/PaginationExample' component={() => <Pages.PaginationExample />} />
+        <Route path='/pages/ProgressExample' component={() => <Pages.ProgressExample />} />
+        <Route path='/pages/RadioExample' component={() => <Pages.RadioExample />} />
+        <Route path='/pages/RangeExample' component={() => <Pages.RangeExample />} />
+        <Route path='/pages/SearchExample' component={() => <Pages.SearchExample />} />
+        <Route path='/pages/SelectExample' component={() => <Pages.SelectExample />} />
         <Route path='/pages/TabsExample' component={() => <Pages.TabsExample />} />
-        <Route path='/pages/Toggles' component={() => <Pages.Toggles />} />
-        <Route path='/pages/Tooltips' component={() => <Pages.Tooltips />} />
-        <Route path='/pages/Typographies' component={() => <Pages.Typographies />} />
+        <Route path='/pages/TableExample' component={() => <Pages.TableExample />} />
+        <Route path='/pages/ToggleExample' component={() => <Pages.ToggleExample />} />
+        <Route path='/pages/TooltipExample' component={() => <Pages.TooltipExample />} />
+        <Route path='/pages/TypographyExample' component={() => <Pages.TypographyExample />} />
       </Switch>
     )
   }

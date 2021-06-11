@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import { ISelectedValue } from '@ncr-design-system/core'
 import { Select, Option } from '@ncr-design-system/react'
 
-export const Selects: FC<{}> = () => {
+export const SelectExample: FC<{}> = () => {
   const [value, setValue] = useState<ISelectedValue[]>([])
 
   const handleChange = (e: any) => {

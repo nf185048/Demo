@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Searchbar } from '@ncr-design-system/react'
 
-export const Searches: FC<{}> = () => {
+export const SearchExample: FC<{}> = () => {
   return (
     <div>
       <p>Searches</p>

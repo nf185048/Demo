@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Badge, Button } from '@ncr-design-system/react/'
 
-export const Badges: FC<{}> = () => {
+export const BadgeExample: FC<{}> = () => {
   return (
     <div>
       <p>Badges</p>

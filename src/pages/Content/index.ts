@@ -1,2 +1,2 @@
-export { Typographies } from './Typographies'
-export { Colors } from './Colors'
+export { TypographyExample } from './Typographies'
+export { ColorExample } from './Colors'

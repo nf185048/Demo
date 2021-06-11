@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Grid, Item, Label, Toggle } from '@ncr-design-system/react'
 
-export const Toggles: FC<{}> = () => {
+export const ToggleExample: FC<{}> = () => {
   return (
     <div>
       <p>Toggles</p>

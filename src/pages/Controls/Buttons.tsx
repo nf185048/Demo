@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Button, ButtonGroup } from '@ncr-design-system/react'
 
-export const Buttons: FC<{}> = ({ children }) => {
+export const ButtonExample: FC<{}> = ({ children }) => {
   return (
     <div>
       <p>Buttons</p>

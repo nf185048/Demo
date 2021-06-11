@@ -2,7 +2,7 @@ import React from 'react'
 import type { FC } from 'react'
 import { Grid, Tooltip, Button } from '@ncr-design-system/react'
 
-export const Tooltips: FC<{}> = () => {
+export const TooltipExample: FC<{}> = () => {
   return (
     <div>
       <p>Tooltips</p>
