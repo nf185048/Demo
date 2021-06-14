@@ -13,7 +13,8 @@
   position: absolute;
 }
 
-.totalPrice {
+.total {
+  text-align: right;
   float: right;
   padding: 1em 0;
 }

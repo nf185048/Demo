@@ -25,22 +25,26 @@ export const OrderSummary: FC<{}> = () => {
     { name: 'Crushed Black Pepper', price: 2.99, description: 'Watkins Gourmet Spice Tin, Pure Ground Black Pepper' }
   ]
 
-  let totalPrice = arr.reduce((tempTotal, item) => tempTotal + item.price, 0).toFixed(2)
+  let subTotal = arr.reduce((tempTotal, item) => tempTotal + item.price, 0)
+  let tax = 0.07 * subTotal
+  let total = subTotal * tax + subTotal
   //meals.reduce((totalCalories, meal) => totalCalories + meal.calorie, 0)
 
   return (
     <div className='orderingContainer'>
       <List>
         <ListTitle lines='inset'>
-          <Label>Shopping Cart</Label>
+          <Label>Order Summary</Label>
         </ListTitle>
 
         {arr.map(value => (
           <ShoppingItem name={value.name} price={value.price} description={value.description} />
         ))}
       </List>
-      <div className='totalPrice'>
-        <Typography variant='title1'>Total: ${totalPrice}</Typography>
+      <div className='total'>
+        <Typography variant='callout'>Subtotal: ${subTotal.toFixed(2)}</Typography>
+        <Typography variant='callout'>Total: ${tax.toFixed(2)}</Typography>
+        <Typography variant='title2'>Total: ${total.toFixed(2)}</Typography>
       </div>
     </div>
   )

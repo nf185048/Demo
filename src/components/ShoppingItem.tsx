@@ -12,8 +12,6 @@ export const ShoppingItem: FC<{
 }> = ({ name = '', price = 0, description = '' }) => {
   const [visible, setVisible] = useState(true)
 
-  // {visible ? <HeaderText title="Hello React"/> : null}
-
   return (
     <div>
       {visible && (
@@ -28,7 +26,7 @@ export const ShoppingItem: FC<{
             <Grid item xs={2}>
               <Label>Qty:</Label>
               <InputWrapper variant='simple'>
-                <Input type='number' value='1' />
+                <Input type='number' placeholder='1' />
               </InputWrapper>
             </Grid>
 
