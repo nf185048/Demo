@@ -1,19 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import type { FC } from 'react'
 import { ContextItem, Typography, ContextMenu, Dropdown, Button, ContextDivider } from '@ncr-design-system/react'
 
 export const DropdownExample: FC<{}> = () => {
-  let opened = false
-  const onHandleOpen = () => {
-    opened = true
-  }
+  const [opened, setOpened] = useState(false)
 
   return (
     <div>
       <p>Dropdowns</p>
 
       <Dropdown open={opened}>
-        <Button slot='trigger' variant='text' onClick={() => onHandleOpen}>
+        <Button slot='trigger' variant='text' onClick={() => setOpened(true)}>
           Open
         </Button>
         <ContextMenu>

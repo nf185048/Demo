@@ -1,0 +1,23 @@
+.buttonStyle {
+  padding: 0;
+}
+
+.itemStyle {
+  padding: 1em 0 0 1em
+}
+
+.cancelButton {
+  margin: auto;
+  top: 1em;
+  right: 0;
+  position: absolute;
+}
+
+.totalPrice {
+  float: right;
+  padding: 1em 0;
+}
+
+.orderingContainer {
+  width: 750px;
+}

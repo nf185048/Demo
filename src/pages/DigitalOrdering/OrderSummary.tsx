@@ -1,40 +1,47 @@
-import React, { useState } from 'react'
+import React from 'react'
 import type { FC } from 'react'
-import { Button, Item, List, ListTitle, Modal } from '@ncr-design-system/react'
+import { Label, List, ListTitle, Typography } from '@ncr-design-system/react'
+import { ShoppingItem } from '../../components'
+import { ShoppingItemBase } from '../../types'
 
 export const OrderSummary: FC<{}> = () => {
-  const [opened, setOpened] = useState(false)
+  const arr: ShoppingItemBase[] = [
+    {
+      name: 'Chicken Breast',
+      price: 7.99,
+      description: 'Sanderson Farms Fresh Boneless Chicken Breast Fillets, 1.6-2.4 lb'
+    },
+    {
+      name: 'Vegetable Broth',
+      price: 4.99,
+      description: 'Pacific Foods Fresh Organic Vegetable Broth, Gluten Free, 32oz'
+    },
+    {
+      name: 'Rice Noodles',
+      price: 3.49,
+      description: 'Thai Kitchen Instant Rice Noodle Soup Spring Onion, Steam-Cooked, 1.6 OZ'
+    },
+    { name: 'Salt', price: 2.49, description: 'McCormick Himalayan Pink Salt Grinder, 2.5 oz' },
+    { name: 'Crushed Black Pepper', price: 2.99, description: 'Watkins Gourmet Spice Tin, Pure Ground Black Pepper' }
+  ]
+
+  let totalPrice = arr.reduce((tempTotal, item) => tempTotal + item.price, 0).toFixed(2)
+  //meals.reduce((totalCalories, meal) => totalCalories + meal.calorie, 0)
 
   return (
-    <div>
-      <p>Order Summary</p>
+    <div className='orderingContainer'>
       <List>
-        <ListTitle>Items</ListTitle>
+        <ListTitle lines='inset'>
+          <Label>Shopping Cart</Label>
+        </ListTitle>
 
-        <Item>Chicken soup</Item>
-        <Item>Salad</Item>
-        <Item>Peanuts</Item>
-        <Item>Corn</Item>
-        <Item>Butter</Item>
+        {arr.map(value => (
+          <ShoppingItem name={value.name} price={value.price} description={value.description} />
+        ))}
       </List>
-
-      <Button variant='outline' onClick={() => setOpened(true)}>
-        View Final Order
-      </Button>
-
-      <Modal width='400px' open={opened} onHide={() => setOpened(true)}>
-        <List>
-          <ListTitle>Items</ListTitle>
-          <Item>Chicken soup</Item>
-          <Item>Salad</Item>
-          <Item>Peanuts</Item>
-          <Item>Corn</Item>
-          <Item>Butter</Item>
-        </List>
-        <div slot='footer'>
-          <Button onClick={() => setOpened(false)}>Submit Order</Button>
-        </div>
-      </Modal>
+      <div className='totalPrice'>
+        <Typography variant='title1'>Total: ${totalPrice}</Typography>
+      </div>
     </div>
   )
 }

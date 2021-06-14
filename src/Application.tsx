@@ -3,20 +3,49 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './Application.css'
 import * as Pages from './pages'
 import { Grid, Button, List, ItemGroup, Item, Label, Drawer, Typography } from '@ncr-design-system/react'
-import { ReactComponent as Menu } from './assets/menu.svg'
+import { Menu } from './assets'
 
 function Application() {
   const [opened, setOpened] = useState(false)
 
-  const handleDrawerClose = (_e: any) => {
-    setOpened(false)
-  }
-
   const AppDrawer = () => {
     return (
-      <Drawer open={opened} placement='left' onHide={handleDrawerClose}>
+      <Drawer open={opened} placement='left' onHide={() => setOpened(false)}>
         <List>
           <ItemGroup>
+            <Item>
+              <Label position='stacked'>App Clones</Label>
+              <Link className='router-link' to='/pages/AppClones'>
+                App Clone
+              </Link>
+              <Link className='router-link' to='/pages/DigitalOrdering'>
+                Digital Ordering
+              </Link>
+            </Item>
+
+            <Item>
+              <Label position='stacked'>Containers</Label>
+              <Link className='router-link' to='/pages/DrawerExample'>
+                Drawers
+              </Link>
+              <Link className='router-link' to='/pages/DropdownExample'>
+                Dropdowns
+              </Link>
+              <Link className='router-link' to='/pages/ModalExample'>
+                Modals
+              </Link>
+            </Item>
+
+            <Item>
+              <Label position='stacked'>Content</Label>
+              <Link className='router-link' to='/pages/ColorExample'>
+                Colors
+              </Link>
+              <Link className='router-link' to='/pages/TypographyExample'>
+                Typography
+              </Link>
+            </Item>
+
             <Item>
               <Label position='stacked'>Controls</Label>
               <Link className='router-link' to='/pages/BreadcrumbExample'>
@@ -55,45 +84,6 @@ function Application() {
             </Item>
 
             <Item>
-              <Label position='stacked'>Containers</Label>
-              <Link className='router-link' to='/pages/DrawerExample'>
-                Drawers
-              </Link>
-              <Link className='router-link' to='/pages/DropdownExample'>
-                Dropdowns
-              </Link>
-              <Link className='router-link' to='/pages/ModalExample'>
-                Modals
-              </Link>
-            </Item>
-
-            <Item>
-              <Label position='stacked'>Content</Label>
-              <Link className='router-link' to='/pages/ColorExample'>
-                Colors
-              </Link>
-              <Link className='router-link' to='/pages/TypographyExample'>
-                Typography
-              </Link>
-            </Item>
-
-            <Item>
-              <Label position='stacked'>Layout</Label>
-              <Link className='router-link' to='/pages/AppExample'>
-                App
-              </Link>
-              <Link className='router-link' to='/pages/GridExample'>
-                Grid
-              </Link>
-              <Link className='router-link' to='/pages/ListExample'>
-                Lists
-              </Link>
-              <Link className='router-link' to='/pages/TableExample'>
-                Tables
-              </Link>
-            </Item>
-
-            <Item>
               <Label position='stacked'>Informational</Label>
               <Link className='router-link' to='/pages/AlertExample'>
                 Alerts
@@ -112,6 +102,22 @@ function Application() {
               </Link>
               <Link className='router-link' to='/pages/TooltipExample'>
                 Tooltip
+              </Link>
+            </Item>
+
+            <Item>
+              <Label position='stacked'>Layout</Label>
+              <Link className='router-link' to='/pages/AppExample'>
+                App
+              </Link>
+              <Link className='router-link' to='/pages/GridExample'>
+                Grid
+              </Link>
+              <Link className='router-link' to='/pages/ListExample'>
+                Lists
+              </Link>
+              <Link className='router-link' to='/pages/TableExample'>
+                Tables
               </Link>
             </Item>
           </ItemGroup>
