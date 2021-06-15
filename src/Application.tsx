@@ -21,6 +21,9 @@ function Application() {
               <Link className='router-link' to='/pages/DigitalOrdering'>
                 Digital Ordering
               </Link>
+              <Link className='router-link' to='/pages/CheckoutForm'>
+                Checkout Form
+              </Link>
             </Item>
 
             <Item>
@@ -136,6 +139,7 @@ function Application() {
         <Route path='/pages/BreadcrumbExample' component={() => <Pages.BreadcrumbExample />} />
         <Route path='/pages/ButtonExample' component={() => <Pages.ButtonExample />} />
         <Route path='/pages/CheckboxExample' component={() => <Pages.CheckboxExample />} />
+        <Route path='/pages/CheckoutForm' component={() => <Pages.CheckoutForm />} />
         <Route path='/pages/Colors' component={() => <Pages.ColorExample />} />
         <Route path='/pages/DigitalOrdering' component={() => <Pages.OrderSummary />} />
         <Route path='/pages/DrawerExample' component={() => <Pages.DrawerExample />} />
@@ -179,7 +183,7 @@ function Application() {
         <AppDrawer />
 
         {/* Content */}
-        <Grid xs={10}>
+        <Grid>
           <AppContent />
         </Grid>
       </Grid>

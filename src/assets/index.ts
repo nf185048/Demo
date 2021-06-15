@@ -1,3 +1,5 @@
 export { ReactComponent as Menu } from './menu.svg'
 export { ReactComponent as Trash } from './trash.svg'
 export { ReactComponent as Close } from './Close-Circle.svg'
+export { ReactComponent as Shop } from './shop.svg'
+export { ReactComponent as Location } from './loc.svg'

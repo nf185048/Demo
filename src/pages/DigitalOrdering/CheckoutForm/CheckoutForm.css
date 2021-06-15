@@ -1,0 +1,16 @@
+.checkoutContainer {
+  margin: 1em 0;
+  border: 1px solid #E6E6E7 ;
+  padding: 2em 0em 3em 2em;
+  border-radius: 8px;
+  box-shadow: 8px 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+div.border {
+  display: flex;
+  position: relative;
+  align-items: inherit;
+  width: 100%;
+  border: 1px solid #F1F1F1;
+  margin: 2em 0 2em 1em;
+}

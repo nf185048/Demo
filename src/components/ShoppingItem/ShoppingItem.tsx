@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Input, InputWrapper, Item, Grid, Label, Typography } from '@ncr-design-system/react'
 import type { FC } from 'react'
-import { Close } from '../assets'
+import { Close } from '../../assets'
 import './ShoppingItem.css'
 // internal
 

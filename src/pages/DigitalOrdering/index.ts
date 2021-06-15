@@ -1,1 +1,2 @@
-export { OrderSummary } from './OrderSummary'
+export { OrderSummary } from './OrderSummary/OrderSummary'
+export { CheckoutForm } from './CheckoutForm/CheckoutForm'

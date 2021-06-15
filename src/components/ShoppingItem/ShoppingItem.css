@@ -13,12 +13,16 @@
   position: absolute;
 }
 
-.total {
-  text-align: right;
-  float: right;
-  padding: 1em 0;
+.icon {
+  padding-right: 1em;
+  position: relative;
+  top: -5px;
 }
 
-.orderingContainer {
-  width: 750px;
+.orderHeader {
+  padding: 1em 0 1em 2em;
+}
+
+.info { 
+  padding: 1em 0 1em 0;
 }
