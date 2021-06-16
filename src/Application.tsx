@@ -21,9 +21,7 @@ function Application() {
               <Link className='router-link' to='/pages/DigitalOrdering'>
                 Digital Ordering
               </Link>
-              <Link className='router-link' to='/pages/CheckoutForm'>
-                Checkout Form
-              </Link>
+              <Link className='router-link' to='/pages/CheckoutForm'></Link>
             </Item>
 
             <Item>

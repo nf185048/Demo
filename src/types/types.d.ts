@@ -15,5 +15,5 @@ export interface CheckoutState {
   zip?: string
   shippingBillingMatch?: boolean
   saveInfo?: boolean
-  payment?: 'creditCard' | 'debitCard' | 'payPal'
+  payment?: 'creditCard' | 'debitCard' | 'payPal' | string
 }

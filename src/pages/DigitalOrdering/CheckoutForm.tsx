@@ -1,17 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import type { FC } from 'react'
 import { Button, Checkbox, FormLabel, Grid, Input, InputWrapper, Item, List, Option, Radio, RadioGroup, Select, Typography } from '@ncr-design-system/react'
-import './DigitalOrdering.css'
+import './style.css'
 import { countries, states } from '../../data'
 
 export const CheckoutForm: FC<{}> = () => {
-  const [value, setValue] = useState<string>('PayPal')
-
-  const handleChange = (e: CustomEvent<{ value: string }>) => {
-    e.preventDefault()
-    setValue(e.detail.value)
-  }
-
 
   return (
     <Grid container className='checkoutContainer'>
@@ -20,11 +13,11 @@ export const CheckoutForm: FC<{}> = () => {
       </Grid>
       <Grid item xs={11}>
         <List>
-          <div style={{ paddingLeft: '1em' }}>
+          <div key='title' style={{ paddingLeft: '1em' }}>
             <Typography variant='title2'>Billing address</Typography>
           </div>
 
-          <Item>
+          <Item key='name'>
             <InputWrapper>
               <Input placeholder='First Name'></Input>
             </InputWrapper>
@@ -33,32 +26,31 @@ export const CheckoutForm: FC<{}> = () => {
             </InputWrapper>
           </Item>
 
-          <Item style={{ paddingTop: '1em' }}>
+          <Item key='username' style={{ paddingTop: '1em' }}>
             <InputWrapper>
               <Input placeholder='Username'></Input>
             </InputWrapper>
           </Item>
 
-          <Item style={{ paddingTop: '1em' }}>
+          <Item key='email' style={{ paddingTop: '1em' }}>
             <InputWrapper>
               <Input placeholder='Email (Optional)'></Input>
             </InputWrapper>
           </Item>
 
-          <Item style={{ paddingTop: '1em' }}>
+          <Item key='address1' style={{ paddingTop: '1em' }}>
             <InputWrapper>
               <Input placeholder='Address'></Input>
             </InputWrapper>
           </Item>
 
-          <Item style={{ paddingTop: '1em' }}>
+          <Item key='address2' style={{ paddingTop: '1em' }}>
             <InputWrapper>
               <Input placeholder='Address 2 (Optional)'></Input>
             </InputWrapper>
           </Item>
 
-
-          <Item style={{ paddingTop: '1em' }} >
+          <Item key='loc' style={{ paddingTop: '1em' }} >
             <InputWrapper>
               <Select placeholder='Country'>
                 {countries.map(country => (
@@ -80,7 +72,7 @@ export const CheckoutForm: FC<{}> = () => {
 
           <div className='border' />
 
-          <div style={{ paddingLeft: '1em' }}>
+          <div key='shippingBillingAddresses' style={{ paddingLeft: '1em' }}>
             <FormLabel label='Shipping address is the same as my billing address'>
               <Checkbox
 
@@ -89,7 +81,7 @@ export const CheckoutForm: FC<{}> = () => {
               />
             </FormLabel>
           </div>
-          <div style={{ paddingLeft: '1em' }}>
+          <div key='saveInfo' style={{ paddingLeft: '1em' }}>
             <FormLabel label='Save this information for next time'>
               <Checkbox
 
@@ -101,11 +93,10 @@ export const CheckoutForm: FC<{}> = () => {
 
           <div className='border' />
 
-          <div style={{ paddingLeft: '1em' }}>
-            <RadioGroup value={value} onNcrChange={handleChange} >
+          <div key='paymentMethod' style={{ paddingLeft: '1em' }}>
+            <RadioGroup >
               <List>
                 <Typography variant='title2'>Payment</Typography>
-
                 <div>
                   <FormLabel label='Credit Card'>
                     <Radio value='CreditCard' />
@@ -127,7 +118,11 @@ export const CheckoutForm: FC<{}> = () => {
 
           <div className='border' />
 
-          <Button style={{ width: '100%' }}>Continue to checkout</Button>
+          <Button
+            style={{ width: '100%' }}
+            key='submit'>
+            Complete order
+          </Button>
         </List>
       </Grid>
     </Grid>

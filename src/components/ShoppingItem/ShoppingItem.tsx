@@ -11,6 +11,8 @@ export const ShoppingItem: FC<{
   description: string
 }> = ({ name = '', price = 0, description = '' }) => {
   const [visible, setVisible] = useState(true)
+  const [quantity, setQuantity] = useState(1)
+  console.log(quantity)
 
   return (
     <div>
@@ -26,7 +28,7 @@ export const ShoppingItem: FC<{
             <Grid item xs={2}>
               <Label>Qty:</Label>
               <InputWrapper variant='simple'>
-                <Input type='number' placeholder='1' />
+                <Input type='number' placeholder={String(quantity)} onChange={() => setQuantity(quantity)} />
               </InputWrapper>
             </Grid>
 
