@@ -1,9 +1,9 @@
 import React from 'react'
 import type { FC } from 'react'
 import { Grid, List, Typography } from '@ncr-design-system/react'
-import { ShoppingItem } from '../../../components'
-import { shoppingItems } from '../../../data'
-import './OrderSummary.css'
+import { ShoppingItem } from '../../components'
+import { shoppingItems } from '../../data'
+import './DigitalOrdering.css'
 
 export const OrderSummary: FC<{}> = () => {
 
