@@ -2,6 +2,7 @@ export interface ShoppingItemBase {
   name: string
   price: number
   description: string
+  image?: ReactElement
 }
 
 export interface CheckoutState {

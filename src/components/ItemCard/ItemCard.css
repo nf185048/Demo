@@ -1,0 +1,13 @@
+.itemContainer {
+  margin: 1em 0;
+  border: 1px solid #E6E6E7 ;
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  box-shadow: 8px 16px 40px rgba(0, 0, 0, 0.12);
+  max-width: 400px;
+}
+
+.image {
+  /* width: 30px; */
+  /* transform: scale(0.05); */
+}

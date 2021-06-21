@@ -1,5 +1,7 @@
-import { ShoppingItemBase  } from "./types"
+import { ShoppingItemBase } from './types'
+import * as Clothing from './assets'
 
+//{ HenleyTee, WaffleTee, TomgirlJean, PuffMiniDress, SoftShirt }
 export const groceryItems: ShoppingItemBase[] = [
   {
     name: 'Chicken Breast',
@@ -16,44 +18,52 @@ export const groceryItems: ShoppingItemBase[] = [
     price: 3.49,
     description: 'Thai Kitchen Instant Rice Noodle Soup Spring Onion, Steam-Cooked, 1.6 OZ'
   },
-  { 
-    name: 'Salt', 
-    price: 2.49, 
-    description: 'McCormick Himalayan Pink Salt Grinder, 2.5 oz' },
-  { 
-    name: 'Crushed Black Pepper', 
-    price: 2.99, 
-    description: 'Watkins Gourmet Spice Tin, Pure Ground Black Pepper' }
+  {
+    name: 'Salt',
+    price: 2.49,
+    description: 'McCormick Himalayan Pink Salt Grinder, 2.5 oz'
+  },
+  {
+    name: 'Crushed Black Pepper',
+    price: 2.99,
+    description: 'Watkins Gourmet Spice Tin, Pure Ground Black Pepper'
+  }
 ]
 
 export const clothingItems: ShoppingItemBase[] = [
   {
     name: 'Waffle Baby Tee',
     price: 17.99,
-    description: 'This baby tee fits like a dream and features waffle texture for a look you will love.'
+    description: 'This baby tee fits like a dream and features waffle texture for a look you will love.',
+    image: Clothing.WaffleTee
   },
   {
     name: 'Striped Henley Baby Tee',
     price: 18.71,
-    description: 'Our baby tees fit like a dream!'
+    description: 'Our baby tees fit like a dream!',
+    image: Clothing.HenleyTee
   },
   {
-    name: 'Oversized Soft & Sexy V-Neck T-Shirt',
+    name: 'Oversized Soft V-Neck T-Shirt',
     price: 18.71,
-    description: 'Our Soft & Sexy jersey is unique, super soft and designed to drape—proof that style and comfort aren’t mutually exclusive.'
+    description:
+      'Our Soft jersey is unique, super soft and designed to drape—proof that style and comfort aren’t mutually exclusive.',
+    image: Clothing.SoftShirt
   },
-  { 
-    name: 'Stretch Tomgirl Jean', 
-    price: 24.99, 
-    description: 'Sits low on the hips with a relaxed thigh, tapered leg, and cropped inseam.' 
-},
-  { 
-    name: 'Puff-Sleeve Babydoll Mini Dress', 
-    price: 49.99, 
-    description: 'Spend all day in the flower fields in this romantic babydoll dress.' }
+  {
+    name: 'Stretch Tomgirl Jean',
+    price: 24.99,
+    description: 'Sits low on the hips with a relaxed thigh, tapered leg, and cropped inseam.',
+    image: Clothing.TomgirlJean
+  },
+  {
+    name: 'Puff-Sleeve Babydoll Mini Dress',
+    price: 49.99,
+    description: 'Spend all day in the flower fields in this romantic babydoll dress.',
+    image: Clothing.PuffMiniDress
+  }
 ]
 
+export const countries = ['Algeria', 'United States', 'United Kingdom', 'Zimbabwe']
 
-export const countries = ["Algeria", "United States", "United Kingdom", "Zimbabwe"]
-
-export const states = ["Alabama", "Colorado", "Georgia", "Montana"]
+export const states = ['Alabama', 'Colorado', 'Georgia', 'Montana']

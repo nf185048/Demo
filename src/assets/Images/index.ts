@@ -1,0 +1,5 @@
+export { ReactComponent as WaffleTee } from './waffle-tee.svg'
+export { ReactComponent as HenleyTee } from './striped-henley-baby-tee.svg'
+export { ReactComponent as TomgirlJean } from './stretch-tomgirl-jean.svg'
+export { ReactComponent as PuffMiniDress } from './puff-sleeve-mini-dress.svg'
+export { ReactComponent as SoftShirt } from './oversized-soft-shirt.svg'

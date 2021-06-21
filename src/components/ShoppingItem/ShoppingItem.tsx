@@ -12,7 +12,6 @@ export const ShoppingItem: FC<{
 }> = ({ name = '', price = 0, description = '' }) => {
   const [visible, setVisible] = useState(true)
   const [quantity, setQuantity] = useState(1)
-  console.log(quantity)
 
   return (
     <div>
