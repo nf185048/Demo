@@ -1,4 +1,4 @@
-import React, { } from 'react'
+import React from 'react'
 import { Typography, Card, Grid, Button } from '@ncr-design-system/react'
 import type { FC } from 'react'
 import './ItemCard.css'
@@ -9,12 +9,13 @@ export const ItemCard: FC<{
   description?: string
   Image?: any
   altText?: string
-}> = ({ name = '', price = 0, description = '', Image = {}, altText = '' }) => {
+}> = ({ name = '', price = 0, description = '', altText = '', Image = undefined }) => {
+
   return (
     <Card className='itemContainer'>
       <Grid container>
         <Grid item xs={12}>
-          <Image className='image' alt={altText} />
+          {(Image) && (<Image />)}
           <Typography variant='title3' bold>{name}</Typography>
           <Typography variant='headline'>{price}</Typography>
           <Typography variant='callout'>{description}</Typography>

@@ -17,8 +17,17 @@
   display: flex;
 }
 
+.homeIcon {
+  transform: scale(1.8);
+  padding-right: 1em;
+}
+
 .list-title {
   padding-bottom: 2em;
+}
+
+.menuIcon {
+  vertical-align: middle;
 }
 
 .router-link,
@@ -30,4 +39,15 @@
   float: left;
   left: 0;
   padding-right: 8em;
+}
+
+.subsection {
+  padding: .5em 0;
+  border-bottom: 1px solid rgba(60, 60, 67, 0.13);
+  display: flex;
+}
+
+.subsection > * {
+  display: flex;
+  width: 100%;
 }

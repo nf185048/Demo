@@ -5,7 +5,7 @@ export const AppExample: FC<{}> = ({ children }) => {
   return (
     <div>
       <p>Apps</p>
-      {children}
+
     </div>
   )
 }

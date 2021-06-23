@@ -1,5 +1,9 @@
 import { ShoppingItemBase } from './types'
-import * as Clothing from './assets'
+import WaffleTee from './assets/Images/waffle-tee.png'
+import HenleyTee from './assets/Images/striped-henley-baby-tee.png'
+import SoftShirt from './assets/Images/stretch-tomgirl-jean.png'
+import TomgirlJean from './assets/Images/puff-sleeve-mini-dress.png'
+import PuffMiniDress from './assets/Images/oversized-soft-shirt.png'
 
 //{ HenleyTee, WaffleTee, TomgirlJean, PuffMiniDress, SoftShirt }
 export const groceryItems: ShoppingItemBase[] = [
@@ -35,32 +39,32 @@ export const clothingItems: ShoppingItemBase[] = [
     name: 'Waffle Baby Tee',
     price: 17.99,
     description: 'This baby tee fits like a dream and features waffle texture for a look you will love.',
-    image: Clothing.WaffleTee
+    image: WaffleTee
   },
   {
     name: 'Striped Henley Baby Tee',
     price: 18.71,
     description: 'Our baby tees fit like a dream!',
-    image: Clothing.HenleyTee
+    image: HenleyTee
   },
   {
     name: 'Oversized Soft V-Neck T-Shirt',
     price: 18.71,
     description:
       'Our Soft jersey is unique, super soft and designed to drape—proof that style and comfort aren’t mutually exclusive.',
-    image: Clothing.SoftShirt
+    image: SoftShirt
   },
   {
     name: 'Stretch Tomgirl Jean',
     price: 24.99,
     description: 'Sits low on the hips with a relaxed thigh, tapered leg, and cropped inseam.',
-    image: Clothing.TomgirlJean
+    image: TomgirlJean
   },
   {
     name: 'Puff-Sleeve Babydoll Mini Dress',
     price: 49.99,
     description: 'Spend all day in the flower fields in this romantic babydoll dress.',
-    image: Clothing.PuffMiniDress
+    image: PuffMiniDress
   }
 ]
 

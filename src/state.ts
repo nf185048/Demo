@@ -1,21 +1,19 @@
-import {CheckoutState} from './types'
+import React from 'react'
+import { CheckoutState } from './types'
 
 const defaultState: CheckoutState = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  address1: "",
-  address2: "",
-  country: "",
-  state: "",
-  zip: "",
+  firstName: '',
+  lastName: '',
+  email: '',
+  address1: '',
+  address2: '',
+  country: '',
+  state: '',
+  zip: '',
   shippingBillingMatch: false,
   saveInfo: false,
-  payment: 'payPal'
+  payment: 'payPal',
+  shoppingList: []
 }
 
-const handler = {}
-
-const proxy = new Proxy(defaultState, handler)
-
-export const State = proxy
+export const State = React.createContext(defaultState)

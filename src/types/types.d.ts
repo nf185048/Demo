@@ -2,7 +2,8 @@ export interface ShoppingItemBase {
   name: string
   price: number
   description: string
-  image?: ReactElement
+  image?: any
+  altText?: string
 }
 
 export interface CheckoutState {
@@ -17,4 +18,5 @@ export interface CheckoutState {
   shippingBillingMatch?: boolean
   saveInfo?: boolean
   payment?: 'creditCard' | 'debitCard' | 'payPal' | string
+  shoppingList?: ShoppingItemBase[]
 }

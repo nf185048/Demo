@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom'
 import './Application.css'
 import * as Pages from './pages'
-import { Grid, Button, List, ItemGroup, Item, Label, Drawer, Typography } from '@ncr-design-system/react'
+import { Grid, Button, Item, Label, Drawer, Typography, ContextItem, ContextMenu } from '@ncr-design-system/react'
 import { Menu } from './assets'
 
 function Application() {
@@ -12,119 +12,190 @@ function Application() {
     return (
       <>
         <Drawer open={opened} placement='left' onHide={() => setOpened(false)}>
-          <List>
-            <ItemGroup>
-              <Item>
-                <Label position='stacked'>App Clones</Label>
+          <ContextMenu>
+            <Item className='subsection'>
+              <Label position='stacked'>
+                <Typography variant='body' bold>App Clones</Typography></Label>
+              <ContextItem>
                 <Link className='router-link' to='/pages/AppClones'>
                   App Clone
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/DigitalOrdering'>
                   Digital Ordering
                 </Link>
-                <Link className='router-link' to='/pages/CheckoutForm'></Link>
-                <Link className='router-link' to='/pages/ShoppingPage'>Shopping</Link>
-              </Item>
+              </ContextItem>
+              <Link className='router-link' to='/pages/CheckoutForm'></Link>
 
-              <Item>
-                <Label position='stacked'>Containers</Label>
+              <ContextItem>
+                <Link className='router-link' to='/pages/ShoppingPage'>
+                  Shopping
+                </Link>
+              </ContextItem>
+
+            </Item>
+
+            <Item className='subsection'>
+              <Label position='stacked'>
+                <Typography variant='body' bold>Containers</Typography>
+              </Label>
+              <ContextItem>
                 <Link className='router-link' to='/pages/DrawerExample'>
                   Drawers
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/DropdownExample'>
                   Dropdowns
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/ModalExample'>
                   Modals
                 </Link>
-              </Item>
+              </ContextItem>
+            </Item>
 
-              <Item>
-                <Label position='stacked'>Content</Label>
+            <Item className='subsection'>
+              <Label position='stacked'>
+                <Typography variant='body' bold>Content</Typography>
+              </Label>
+              <ContextItem>
                 <Link className='router-link' to='/pages/ColorExample'>
                   Colors
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/TypographyExample'>
                   Typography
                 </Link>
-              </Item>
+              </ContextItem>
+            </Item>
 
-              <Item>
-                <Label position='stacked'>Controls</Label>
+            <Item className='subsection'>
+              <Label position='stacked'>
+                <Typography variant='body' bold>Controls</Typography>
+              </Label>
+              <ContextItem>
                 <Link className='router-link' to='/pages/BreadcrumbExample'>
                   Breadcrumbs
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/ButtonExample'>
                   Buttons
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/CheckboxExample'>
                   Checkboxes
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/InputExample'>
                   Inputs
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/PaginationExample'>
                   Pagination
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/RadioExample'>
                   Radios
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/RangeExample'>
                   Ranges
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/SearchExample'>
                   Search
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/SelectExample'>
                   Select
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/TabsExample'>
                   Tabs
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/ToggleExample'>
                   Toggle
                 </Link>
-              </Item>
+              </ContextItem>
+            </Item>
 
-              <Item>
-                <Label position='stacked'>Informational</Label>
+            <Item className='subsection'>
+              <Label position='stacked'>
+                <Typography variant='body' bold>Informational</Typography>
+              </Label>
+              <ContextItem>
                 <Link className='router-link' to='/pages/AlertExample'>
                   Alerts
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/BadgeExample'>
                   Badges
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/IconExample'>
                   Icon
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/LoadingExample'>
                   Loading
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/ProgressExample'>
                   Progress
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/TooltipExample'>
                   Tooltip
                 </Link>
-              </Item>
+              </ContextItem>
+            </Item>
 
-              <Item>
-                <Label position='stacked'>Layout</Label>
+            <Item className='subsection'>
+              <Label position='stacked'>
+                <Typography variant='body' bold>Layout</Typography>
+              </Label>
+              <ContextItem>
                 <Link className='router-link' to='/pages/AppExample'>
                   App
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/GridExample'>
                   Grid
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/ListExample'>
                   Lists
                 </Link>
+              </ContextItem>
+              <ContextItem>
                 <Link className='router-link' to='/pages/TableExample'>
                   Tables
                 </Link>
-              </Item>
-            </ItemGroup>
-          </List>
+              </ContextItem>
+            </Item>
+          </ContextMenu>
         </Drawer>
       </>
     )
@@ -147,7 +218,7 @@ function Application() {
         <Route path='/pages/ButtonExample' component={() => <Pages.ButtonExample />} />
         <Route path='/pages/CheckboxExample' component={() => <Pages.CheckboxExample />} />
         <Route path='/pages/CheckoutForm' component={() => <Pages.CheckoutForm />} />
-        <Route path='/pages/Colors' component={() => <Pages.ColorExample />} />
+        <Route path='/pages/ColorExample' component={() => <Pages.ColorExample />} />
         <Route path='/pages/DigitalOrdering' component={() => <Pages.OrderSummary />} />
         <Route path='/pages/DrawerExample' component={() => <Pages.DrawerExample />} />
         <Route path='/pages/DropdownExample' component={() => <Pages.DropdownExample />} />
@@ -185,14 +256,16 @@ function Application() {
             </Button>
           </Grid>
           <Grid item justify='flex-start' alignItems='center' style={{ paddingTop: '1em' }}>
-            <Typography variant='headline'><Link className='router-link' to='/pages/Home'>User Testing</Link></Typography>
+            <Link className='router-link' to='/pages/Home'>
+              User Testing
+            </Link>
           </Grid>
         </Grid>
 
         <AppDrawer />
 
         {/* Content */}
-        <Grid>
+        <Grid item xs={11}>
           <AppContent />
         </Grid>
       </Grid>

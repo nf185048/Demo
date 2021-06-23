@@ -13,9 +13,8 @@ export const RangeExample: FC<{}> = () => {
   return (
     <div>
       <p>Ranges</p>
-
       <Item>
-        <Range value={value} min={0} max={100} onNcrChange={handleUpdate} />
+        <Range value={value} min={0} max={20} onNcrChange={handleUpdate} />
       </Item>
     </div>
   )

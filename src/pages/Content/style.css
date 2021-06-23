@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+.colorsDemoContainer {
+  margin: 1em 0;
+  border: 1px solid #E6E6E7 ;
+  padding: 4em 2em 4em 4em;
+  border-radius: 8px;
+  box-shadow: 8px 16px 40px rgba(0, 0, 0, 0.12);
+  width: 55%;
+}
+
+.fakeCompany {
+  font-family: 'Dela Gothic One', cursive;
+}
+
+.bar {
+  padding-bottom: 6em;
+}
+
+.teacherCard {
+  max-width: 80%;
+}
