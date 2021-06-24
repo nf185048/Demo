@@ -9,7 +9,8 @@ export const ItemCard: FC<{
   description?: string
   Image?: any
   altText?: string
-}> = ({ name = '', price = 0, description = '', altText = '', Image = undefined }) => {
+  handleClick?: any
+}> = ({ name = '', price = 0, description = '', altText = '', Image = undefined, handleClick = () => { } }) => {
 
   return (
     <Card className='itemContainer'>
@@ -21,7 +22,7 @@ export const ItemCard: FC<{
           <Typography variant='callout'>{description}</Typography>
         </Grid>
         <Grid container justify='flex-end' style={{ paddingTop: '1.5em' }}>
-          <Button variant='outline'>Add to cart</Button>
+          <Button variant='outline' onClick={handleClick}>Add to cart</Button>
         </Grid>
       </Grid>
     </Card>

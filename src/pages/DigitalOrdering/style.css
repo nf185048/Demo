@@ -15,6 +15,14 @@ div.border {
   margin: 2em 0 2em 1em;
 }
 
+.shoppingPageContainer {
+  margin: 1em 0;
+  border: 1px solid #E6E6E7 ;
+  padding: 2em 0em 3em 2em;
+  border-radius: 8px;
+  box-shadow: 8px 16px 40px rgba(0, 0, 0, 0.12);
+}
+
 .orderingContainer {
   margin: 1em 0;
   width: 750px;

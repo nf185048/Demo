@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Input, InputWrapper, Item, Grid, Label, Typography } from '@ncr-design-system/react'
+import { Button, InputWrapper, Item, Grid, Label, Typography } from '@ncr-design-system/react'
 import type { FC } from 'react'
 import { Close } from '../../assets'
 import './ShoppingItem.css'
@@ -12,22 +12,27 @@ export const ShoppingItem: FC<{
 }> = ({ name = '', price = 0, description = '' }) => {
   const [visible, setVisible] = useState(true)
   const [quantity, setQuantity] = useState(1)
+  const [finalPrice, setPrice] = useState(price)
 
   return (
     <div>
       {visible && (
         <Item lines='inset' className='itemStyle'>
           <Grid container>
-            <Grid item justify='flex-start' xs={9}>
+            <Grid item justify='flex-start' xs={10}>
               <Typography variant='headline'>{name}</Typography>
-              <Typography variant='callout'>{price}</Typography>
+              <Typography variant='callout'>{finalPrice}</Typography>
               <Typography variant='caption1'>{description}</Typography>
             </Grid>
 
             <Grid item xs={2}>
               <Label>Qty:</Label>
               <InputWrapper variant='simple'>
-                <Input type='number' placeholder={String(quantity)} onChange={() => setQuantity(quantity)} />
+                <input id='qty' type="number" placeholder={String(quantity)} onChange={() => {
+                  setQuantity(quantity + 1) // TODO UPDATE THE WAY QUANTITY INCREASES OR DECREASES
+                  setPrice(quantity * price)
+                  price = finalPrice
+                }} />
               </InputWrapper>
             </Grid>
 

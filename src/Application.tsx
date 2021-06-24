@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-ro
 import './Application.css'
 import * as Pages from './pages'
 import { Grid, Button, Item, Label, Drawer, Typography, ContextItem, ContextMenu } from '@ncr-design-system/react'
-import { Menu } from './assets'
+import { Menu, } from './assets'
 
 function Application() {
   const [opened, setOpened] = useState(false)
@@ -22,18 +22,13 @@ function Application() {
                 </Link>
               </ContextItem>
               <ContextItem>
-                <Link className='router-link' to='/pages/DigitalOrdering'>
-                  Digital Ordering
-                </Link>
-              </ContextItem>
-              <Link className='router-link' to='/pages/CheckoutForm'></Link>
-
-              <ContextItem>
                 <Link className='router-link' to='/pages/ShoppingPage'>
                   Shopping
                 </Link>
               </ContextItem>
-
+              {/* Hidden links for internal routing use */}
+              <Link className='router-link' to='/pages/OrderSummary' />
+              <Link className='router-link' to='/pages/CheckoutForm' />
             </Item>
 
             <Item className='subsection'>
@@ -219,7 +214,6 @@ function Application() {
         <Route path='/pages/CheckboxExample' component={() => <Pages.CheckboxExample />} />
         <Route path='/pages/CheckoutForm' component={() => <Pages.CheckoutForm />} />
         <Route path='/pages/ColorExample' component={() => <Pages.ColorExample />} />
-        <Route path='/pages/DigitalOrdering' component={() => <Pages.OrderSummary />} />
         <Route path='/pages/DrawerExample' component={() => <Pages.DrawerExample />} />
         <Route path='/pages/DropdownExample' component={() => <Pages.DropdownExample />} />
         <Route path='/pages/GridExample' component={() => <Pages.GridExample />} />
@@ -229,6 +223,7 @@ function Application() {
         <Route path='/pages/ListExample' component={() => <Pages.ListExample />} />
         <Route path='/pages/LoadingExample' component={() => <Pages.LoadingExample />} />
         <Route path='/pages/ModalExample' component={() => <Pages.ModalExample />} />
+        <Route path='/pages/OrderSummary' component={() => <Pages.OrderSummary />} />
         <Route path='/pages/PaginationExample' component={() => <Pages.PaginationExample />} />
         <Route path='/pages/ProgressExample' component={() => <Pages.ProgressExample />} />
         <Route path='/pages/RadioExample' component={() => <Pages.RadioExample />} />
