@@ -16,12 +16,12 @@ export const ItemCard: FC<{
     <Card className='itemContainer'>
       <Grid container>
         <Grid item xs={12}>
-          {(Image) && (<Image />)}
+          {(Image) ? (<Image />) : (<div style={{ width: '380px', height: '200px', backgroundColor: 'grey', marginBottom: '1em' }} />)}
           <Typography variant='title3' bold>{name}</Typography>
           <Typography variant='headline'>{price}</Typography>
           <Typography variant='callout'>{description}</Typography>
         </Grid>
-        <Grid container justify='flex-end' style={{ paddingTop: '1.5em' }}>
+        <Grid container alignContent='flex-end' justify='flex-end' style={{ paddingTop: '1.5em' }}>
           <Button variant='outline' onClick={handleClick}>Add to cart</Button>
         </Grid>
       </Grid>

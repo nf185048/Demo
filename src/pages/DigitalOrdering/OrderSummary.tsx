@@ -14,14 +14,12 @@ export const OrderSummary: FC<{}> = () => {
     const state: any = props?.location?.state
     updateShoppingList(state.shoppingList as ShoppingItemBase[])
 
-
-
     let subTotal = 0
     let tax = 0.07 * subTotal
     let total = tax + subTotal
 
     return (
-      <Grid container className='orderingContainer'>
+      <Grid container className='digitalOrdering'>
         <Grid container>
           <Grid item xs={12} style={{ paddingBottom: '1em' }}>
             <Typography variant='title2' bold >Order Summary</Typography>
@@ -63,7 +61,15 @@ export const OrderSummary: FC<{}> = () => {
             style={{ width: '100%', margin: '2em 0 0 0' }}
             {...props}
             onClick={() => {
-              props.history.push('/pages/CheckoutForm')
+              // props.history.push('/pages/CheckoutForm')
+              props.history.push({
+                pathname: '/pages/CheckoutForm',
+                state: {
+                  subTotal: subTotal,
+                  tax: tax,
+                  finalPrice: total
+                }
+              })
             }}>
             Continue to payment
           </Button>

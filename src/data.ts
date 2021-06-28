@@ -55,15 +55,15 @@ export const clothingItems: ShoppingItemBase[] = [
     image: SoftShirt
   },
   {
-    name: 'Stretch Tomgirl Jean',
+    name: 'Fleece Velour Ribbed Hoodie',
     price: 24.99,
-    description: 'Sits low on the hips with a relaxed thigh, tapered leg, and cropped inseam.',
+    description: "This hoodie features ribbed texture for a look and feel you'll love. Layer your way!.",
     image: TomgirlJean
   },
   {
-    name: 'Puff-Sleeve Babydoll Mini Dress',
-    price: 49.99,
-    description: 'Spend all day in the flower fields in this romantic babydoll dress.',
+    name: 'Ringer Graphic T-Shirt',
+    price: 19.97,
+    description: 'This graphic tee is made cropped for easy styling.',
     image: PuffMiniDress
   }
 ]

@@ -16,16 +16,18 @@ function Application() {
             <Item className='subsection'>
               <Label position='stacked'>
                 <Typography variant='body' bold>App Clones</Typography></Label>
-              <ContextItem>
-                <Link className='router-link' to='/pages/AppClones'>
+
+              <Link className='router-link' to='/pages/AppClones'>
+                <ContextItem>
                   App Clone
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/ShoppingPage'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/ShoppingPage'>
+                <ContextItem>
                   Shopping
-                </Link>
-              </ContextItem>
+                </ContextItem>
+              </Link>
               {/* Hidden links for internal routing use */}
               <Link className='router-link' to='/pages/OrderSummary' />
               <Link className='router-link' to='/pages/CheckoutForm' />
@@ -35,160 +37,186 @@ function Application() {
               <Label position='stacked'>
                 <Typography variant='body' bold>Containers</Typography>
               </Label>
-              <ContextItem>
-                <Link className='router-link' to='/pages/DrawerExample'>
+
+              <Link className='router-link' to='/pages/DrawerExample'>
+                <ContextItem>
                   Drawers
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/DropdownExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/DropdownExample'>
+                <ContextItem>
                   Dropdowns
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/ModalExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/ModalExample'>
+                <ContextItem>
                   Modals
-                </Link>
-              </ContextItem>
+                </ContextItem>
+              </Link>
             </Item>
 
             <Item className='subsection'>
               <Label position='stacked'>
                 <Typography variant='body' bold>Content</Typography>
               </Label>
-              <ContextItem>
-                <Link className='router-link' to='/pages/ColorExample'>
+
+              <Link className='router-link' to='/pages/ColorExample'>
+                <ContextItem>
                   Colors
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/TypographyExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/TypographyExample'>
+                <ContextItem>
                   Typography
-                </Link>
-              </ContextItem>
+                </ContextItem>
+              </Link>
             </Item>
 
             <Item className='subsection'>
               <Label position='stacked'>
                 <Typography variant='body' bold>Controls</Typography>
               </Label>
-              <ContextItem>
-                <Link className='router-link' to='/pages/BreadcrumbExample'>
+
+              <Link className='router-link' to='/pages/BreadcrumbExample'>
+                <ContextItem>
                   Breadcrumbs
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/ButtonExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/ButtonExample'>
+                <ContextItem>
                   Buttons
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/CheckboxExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/CheckboxExample'>
+                <ContextItem>
                   Checkboxes
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/InputExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/InputExample'>
+                <ContextItem>
                   Inputs
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/PaginationExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/PaginationExample'>
+                <ContextItem>
                   Pagination
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/RadioExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/RadioExample'>
+                <ContextItem>
                   Radios
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/RangeExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/RangeExample'>
+                <ContextItem>
                   Ranges
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/SearchExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/SearchExample'>
+                <ContextItem>
                   Search
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/SelectExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/SelectExample'>
+                <ContextItem>
                   Select
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/TabsExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/TabsExample'>
+                <ContextItem>
                   Tabs
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/ToggleExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/ToggleExample'>
+                <ContextItem>
                   Toggle
-                </Link>
-              </ContextItem>
+                </ContextItem>
+              </Link>
             </Item>
 
             <Item className='subsection'>
               <Label position='stacked'>
                 <Typography variant='body' bold>Informational</Typography>
               </Label>
-              <ContextItem>
-                <Link className='router-link' to='/pages/AlertExample'>
+
+              <Link className='router-link' to='/pages/AlertExample'>
+                <ContextItem>
                   Alerts
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/BadgeExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/BadgeExample'>
+                <ContextItem>
                   Badges
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/IconExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/IconExample'>
+                <ContextItem>
                   Icon
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/LoadingExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/LoadingExample'>
+                <ContextItem>
                   Loading
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/ProgressExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/ProgressExample'>
+                <ContextItem>
                   Progress
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/TooltipExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/TooltipExample'>
+                <ContextItem>
                   Tooltip
-                </Link>
-              </ContextItem>
+                </ContextItem>
+              </Link>
             </Item>
 
             <Item className='subsection'>
               <Label position='stacked'>
                 <Typography variant='body' bold>Layout</Typography>
               </Label>
-              <ContextItem>
-                <Link className='router-link' to='/pages/AppExample'>
+
+              <Link className='router-link' to='/pages/AppExample'>
+                <ContextItem>
                   App
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/GridExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/GridExample'>
+                <ContextItem>
                   Grid
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/ListExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/ListExample'>
+                <ContextItem>
                   Lists
-                </Link>
-              </ContextItem>
-              <ContextItem>
-                <Link className='router-link' to='/pages/TableExample'>
+                </ContextItem>
+              </Link>
+
+              <Link className='router-link' to='/pages/TableExample'>
+                <ContextItem>
                   Tables
-                </Link>
-              </ContextItem>
+                </ContextItem>
+              </Link>
             </Item>
           </ContextMenu>
         </Drawer>
