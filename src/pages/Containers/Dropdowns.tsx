@@ -10,19 +10,19 @@ export const DropdownExample: FC<{}> = () => {
       <p>Dropdowns</p>
 
       <Dropdown open={opened}>
-        <Button slot='trigger' variant='text' onClick={() => setOpened(true)}>
+        <Button slot='trigger' variant='outline' onClick={() => setOpened(true)}>
           Open
         </Button>
         <ContextMenu>
           <ContextItem selected>
-            <Typography>Menu Item 1</Typography>
+            <>Menu Item 1</>
           </ContextItem>
           <ContextItem>
-            <Typography>Menu Item 2</Typography>
+            <>Menu Item 2</>
           </ContextItem>
-          <ContextDivider></ContextDivider>
+          <ContextDivider />
           <ContextItem>
-            <Typography>Menu Item 3</Typography>
+            <>Menu Item 3</>
           </ContextItem>
         </ContextMenu>
       </Dropdown>

@@ -9,7 +9,6 @@ import { ShoppingItem } from '../../components'
 export const OrderSummary: FC<{}> = () => {
   const [shoppingList, updateShoppingList] = useState<ShoppingItemBase[]>()
 
-
   const OrderSummaryBase = withRouter((props) => {
     const state: any = props?.location?.state
     updateShoppingList(state.shoppingList as ShoppingItemBase[])
@@ -32,7 +31,9 @@ export const OrderSummary: FC<{}> = () => {
               tax = 0.07 * subTotal
               total = tax + subTotal
               return (
-                <ShoppingItem name={item.name} price={item.price} description={item.description} />
+                <ShoppingItem name={item.name} price={item.price} description={item.description} onClick={(e) => {
+                  console.log('uhhhh?', e)
+                }} />
               )
             }) : (
               <Typography variant='largeTitle'>
