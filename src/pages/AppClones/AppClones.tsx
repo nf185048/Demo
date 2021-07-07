@@ -9,16 +9,16 @@ export const AppClones: FC<{}> = () => {
   return (
     <Grid container style={{ margin: '4em 0' }}>
       <Grid item>
-        <Card style={cardStyle}>Test Item</Card>
+        <div style={cardStyle}>Test Item</div>
       </Grid>
       <Grid item>
-        <Card style={cardStyle}>Test Item</Card>
+        <div style={cardStyle}>Test Item</div>
       </Grid>
       <Grid item>
-        <Card style={cardStyle}>Test Item</Card>
+        <div style={cardStyle}>Test Item</div>
       </Grid>
       <Grid item>
-        <Card style={cardStyle}>Test Item</Card>
+        <div style={cardStyle}>Test Item</div>
       </Grid>
     </Grid>
   )

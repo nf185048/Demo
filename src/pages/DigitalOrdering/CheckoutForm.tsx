@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import type { FC } from 'react'
-import { Button, Card, Checkbox, FormLabel, Grid, InputWrapper, Item, Label, List, Option, Radio, RadioGroup, Select, Typography } from '@ncr-design-system/react'
+import { Button, Card, Checkbox, FormLabel, Grid, InputWrapper, Item, Label, List, Modal, Option, Radio, RadioGroup, Select, Typography } from '@ncr-design-system/react'
 import './style.css'
 import { countries, states } from '../../data'
 import { withRouter } from 'react-router-dom'
 
 export const CheckoutForm: FC<{}> = () => {
+  const [opened, setOpened] = useState(false)
+
 
   const CheckoutFormBase = withRouter((props) => {
     const state: any = props?.location?.state
     const finalPrice = (state.finalPrice as number)
-
+    const subTotal = (state.subTotal as number)
+    const tax = (state.tax as number)
 
     return (
       <Grid container className='digitalOrdering' style={{ padding: '4em' }}>
@@ -147,25 +150,41 @@ export const CheckoutForm: FC<{}> = () => {
         </Grid>
 
         <Grid item xs={4}>
-          <Card style={{ marginTop: '2.95em', marginLeft: '1em' }}>
+          <Card style={{ marginTop: '2.95em', marginLeft: '1em', padding: '1em' }}>
             <Typography variant='title2'>
               Summary
             </Typography>
+            <div className='smallBorder' />
+            <Label>Subtotal</Label>
+            <Typography variant='title3' bold>${(subTotal as number).toFixed(2)}</Typography>
+            <Label>Tax</Label>
+            <Typography variant='title3' bold>${(tax as number).toFixed(2)}</Typography>
             <Label>Total</Label>
             <Typography variant='title3' bold>${(finalPrice as number).toFixed(2)}</Typography>
           </Card>
         </Grid>
 
-        <div className='border' />
+
+
+        <Modal open={opened} onHide={() => setOpened(false)} >
+          <Typography variant='largeTitle'>Order #110295610</Typography>
+          <Typography variant='body'>Thank you for your order!</Typography>
+          <div style={{ padding: '2em 0' }} />
+          <Typography variant='body'>Total: ${(finalPrice as number).toFixed(2)}</Typography>
+        </Modal>
 
         <Button
-          style={{ width: '100%' }}
+          onClick={() => setOpened(true)}
+          style={{ width: '100%', marginTop: '3em' }}
           key='submit'>
           Complete order
         </Button>
+
+
       </Grid>
     )
   })
+
 
   return (
     <CheckoutFormBase />

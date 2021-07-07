@@ -6,7 +6,6 @@ import './style.css'
 export const DrawerExample: FC<{}> = () => {
   // let opened = false
   const [opened, setOpened] = useState(false)
-  const [selected, selectIndex] = useState<number>(0)
 
   const colors: string[] = ['white', 'black']
 
@@ -28,8 +27,8 @@ export const DrawerExample: FC<{}> = () => {
 
       <Drawer open={opened} label='Background Color' placement='top' onHide={handleDrawerClose}>
         <>
-          {colors.map((item, index) => (
-            <Item selected={index === selected}>
+          {colors.map((item, i) => (
+            <Item>
               <Typography>{item}</Typography>
             </Item>
           ))}

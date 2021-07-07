@@ -1,2 +1,5 @@
 export * from './ShoppingItem/ShoppingItem'
 export * from './ItemCard/ItemCard'
+export * from './SavingsItem/SavingsItem'
+export * from './TransactionItem/TransactionItem'
+export * from './CreditCard/CreditCard'

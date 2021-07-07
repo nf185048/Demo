@@ -13,15 +13,21 @@ function Application() {
       <>
         <Drawer open={opened} placement='left' onHide={() => setOpened(false)}>
           <ContextMenu>
-            <Item className='subsection'>
-              <Label position='stacked'>
-                <Typography variant='body' bold>App Clones</Typography></Label>
 
-              <Link className='router-link' to='/pages/AppClones'>
+            <Item className='subsection'>
+              <Link className='router-link' to='/pages/Info'>
                 <ContextItem>
-                  App Clone
+                  About
                 </ContextItem>
               </Link>
+            </Item>
+
+            <Item className='subsection'>
+              <Label position='stacked'>
+                <Typography variant='body' bold>App Clones</Typography>
+              </Label>
+
+              <Link className='router-link' to='/pages/AppClones'></Link>
 
               <Link className='router-link' to='/pages/ShoppingPage'>
                 <ContextItem>
@@ -247,6 +253,7 @@ function Application() {
         <Route path='/pages/GridExample' component={() => <Pages.GridExample />} />
         <Route path='/pages/Home' component={() => <Pages.Home />} />
         <Route path='/pages/IconExample' component={() => <Pages.IconExample />} />
+        <Route path='/pages/Info' component={() => <Pages.Info />} />
         <Route path='/pages/InputExample' component={() => <Pages.InputExample />} />
         <Route path='/pages/ListExample' component={() => <Pages.ListExample />} />
         <Route path='/pages/LoadingExample' component={() => <Pages.LoadingExample />} />
